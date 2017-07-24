@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Web存储</title>
+</head>
+<body>
+<!-- 没在cookie里面储存，信息存储在js里面，可以访问 
+   HTML5 提供了两种在客户端存储数据的新方法：
+  1.localStorage - 没有时间限制的数据存储
+  2.sessionStorage - 针对一个 session 的数据存储
+-->
+ <script type="text/javascript">
+
+if (localStorage.pagecount)
+	{
+	localStorage.pagecount=Number(localStorage.pagecount) +1;
+	}
+else
+	{
+	localStorage.pagecount=1;
+	}
+document.write("Visits: " + localStorage.pagecount + " time(s).");
+
+</script> 
+
+<p>刷新页面会看到计数器在增长。</p>
+
+<p>请关闭浏览器窗口，然后再试一次，计数器会继续计数。</p>
+
+</body>
+</html>
